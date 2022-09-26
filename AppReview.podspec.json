@@ -1,0 +1,26 @@
+{
+  "name": "AppReview",
+  "version": "0.0.1",
+  "summary": "⭐️ A tiny library to request review on the AppStore",
+  "homepage": "https://github.com/mezhevikin/AppReview",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Mezhevikin Alexey": "mezhevikin@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/mezhevikin/AppReview.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "11.0",
+    "osx": "10.14"
+  },
+  "source_files": "Sources/**/*",
+  "pushed_with_swift_version": "5.5",
+  "frameworks": [
+    "StoreKit"
+  ]
+}
