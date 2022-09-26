@@ -24,10 +24,6 @@ AppReview.requestIf(launches: 3, days: 5)
 AppReview().requestIfNeeded()
 ```
 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/973364/192087660-371f7b89-2159-4af6-adc1-a86f38066bd1.png" width="200">
-</p>
-
 ### Using
 
 You can call AppReview in
