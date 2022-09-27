@@ -1,6 +1,6 @@
 {
   "name": "AppReview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "⭐️ A tiny library to request review on the AppStore",
   "homepage": "https://github.com/mezhevikin/AppReview",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/mezhevikin/AppReview.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "11.0",
