@@ -61,6 +61,12 @@ public class AppReview {
 
     @discardableResult
     public func requestIfNeeded() -> Bool {
+        
+        guard !isDebugConfig else {
+            request()
+            return true
+        }
+        
         if firstLaunchDate == nil { firstLaunchDate = Date() }
         launches += 1
         guard isNeeded else { return false }
@@ -92,6 +98,14 @@ public class AppReview {
     
     internal func daysBetween(_ start: Date, _ end: Date) -> Int {
         Calendar.current.dateComponents([.day], from: start, to: end).day!
+    }
+    
+    internal func isDebugConfig -> Bool {
+#if DEBUG
+        return true
+#else
+        return false
+#endif
     }
     
 }
