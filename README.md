@@ -1,6 +1,6 @@
 # AppReview
 
-⭐️ A tiny library to request review on the AppStore.
+⭐️ A tiny library for iOS and macOS to request reviews on the App Store.
 
 This is wrapper around native SKStoreReviewController.
 
@@ -32,8 +32,8 @@ Use after positive user actions (e.g., completing a purchase).
 import SwiftUI
 import AppReview
 
-@main struct ExampleApp: App {
-    
+@main
+struct ExampleApp: App {
     init() {
         AppReview.requestIf(launches: 5, days: 3)
     }
