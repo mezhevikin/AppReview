@@ -19,27 +19,35 @@ AppReview.requestIf(days: 5)
 AppReview.requestIf(launches: 3, days: 5)
 ```
 
-### Review after purchase
+### Review without conditions
 ```swift
 AppReview().requestIfNeeded()
 ```
 
+Use after positive user actions (e.g., completing a purchase).
+
 ### Using
 
-You can call AppReview in
-* SceneDelegate.sceneWillEnterForeground()
-* AppDelegate.applicationDidFinishLaunching()
-* ViewController.viewDidLoad()
-* View.onAppear()
+```swift
+import SwiftUI
+import AppReview
+
+@main struct ExampleApp: App {
+    
+    init() {
+        AppReview.requestIf(launches: 5, days: 3)
+    }
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+```
 
 ### Swift Package Manager
 
 ```
 https://github.com/mezhevikin/AppReview.git
-```
-
-### CocoaPods
-
-```
-pod 'AppReview', :git => 'https://github.com/mezhevikin/AppReview.git'
 ```
