@@ -39,17 +39,13 @@ public class AppReview {
     }
     
     public var daysAfterFirstLaunch: Int {
-        if let date = firstLaunchDate {
-            return daysBetween(date, Date())
-        }
-        return 0
+        guard let date = firstLaunchDate else { return 0 }
+        return daysBetween(date, Date())
     }
-    
+
     public var daysAfterLastReview: Int {
-        if let date = lastReviewDate {
-            return daysBetween(date, Date())
-        }
-        return 0
+        guard let date = lastReviewDate else { return 0 }
+        return daysBetween(date, Date())
     }
     
     public var isNeeded: Bool {
@@ -88,10 +84,10 @@ public class AppReview {
     
     internal var version = Bundle.main.object(
         forInfoDictionaryKey: "CFBundleShortVersionString"
-    ) as! String
+    ) as? String
     
     internal func daysBetween(_ start: Date, _ end: Date) -> Int {
-        Calendar.current.dateComponents([.day], from: start, to: end).day!
+        Calendar.current.dateComponents([.day], from: start, to: end).day ?? 0
     }
     
 }

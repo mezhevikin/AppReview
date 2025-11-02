@@ -1,10 +1,10 @@
-// swift-tools-version: 5.5
+// swift-tools-version: 6.2
 import PackageDescription
 
 let package = Package(
     name: "AppReview",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v12),
         .macOS(.v10_14)
     ],
     products: [
